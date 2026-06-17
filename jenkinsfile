@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage('Checkout') {
-            steps { git 'https://github.com/Adviti135/jenkins-demo.git' }
+            steps { checkout scm }
         }
         stage('Build') {
             steps { sh 'mvn clean package' }
